@@ -55,7 +55,7 @@ body {
   margin-top: 8.4rem;
   overflow: hidden;
   background-color: var(--clr-blue);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 .card__image {
@@ -103,7 +103,7 @@ body {
   color: var(--clr-white-lighter);
 }
 
-.card__stats-col:not(last-child) {
+.card__stats-col:not(:last-child) {
   margin-bottom: 2.5rem;
 }
 
@@ -143,6 +143,65 @@ body {
 }
 .attribution a:hover::before {
   transform: scale(1);
+}
+
+@media (min-width: 375px) {
+  .container {
+    max-width: 144rem;
+    padding: 8rem 10rem;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card__image {
+    grid-column: 2/3;
+  }
+
+  .card__mobile-img {
+    display: none;
+  }
+
+  .card__desktop-img {
+    width: 100%;
+    display: block;
+  }
+
+  .card__content {
+    padding: 8rem 12.8rem 0 8rem;
+    text-align: left;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .card__content-headline {
+    margin-bottom: 2.5rem;
+    font-size: 3.7rem;
+  }
+
+  .card__content-text {
+    margin-bottom: 8rem;
+    font-size: 1.6rem;
+  }
+
+  .card__stats {
+    display: flex;
+  }
+
+  .card__stats-col:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 7rem;
+  }
+
+  .card__stats-headline {
+    font-size: 2.5rem;
+  }
+
+  .card__stats-span {
+    font-size: 1.1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
