@@ -49,6 +49,7 @@ body {
 
 .container {
     width: 87%;
+    max-width: 67.5rem;
     height: 100vh;
     margin: 0 auto;
 
@@ -160,6 +161,15 @@ body {
 }
 
 @media (min-width: 375px) {
+    .card__stats {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+//na 375px napraviti brake point (card stats staviti inline)
+
+@media (min-width: 1525px) {
     .container {
         max-width: 144rem;
         padding: 8rem 10rem;
